@@ -22,6 +22,8 @@ void RollTheDice()
         Console.WriteLine($"You rolled a {firstRoll} and a {secondRoll}, thats a total of {dieTotal}");
         if (userSideChoice == 6)
         { Console.WriteLine(ReactToSixSideDice(firstRoll, secondRoll)); }
+        else if (userSideChoice == 10)
+        { Console.WriteLine(ReactToTenSidedDice(firstRoll, secondRoll)); }
 
         Console.WriteLine("Would you like to roll the dice again? enter n or no to quit, any other key will continue");
         string playAgain = Console.ReadLine().ToLower();
@@ -29,7 +31,7 @@ void RollTheDice()
         {
             case "n":
             case "no":
-                Console.WriteLine("Thanks for rolling my dice, have a great day!");
+                Console.WriteLine("Thanks for rolling the dice, have a great day!");
                 gambleMore = false;
                 break;
             default:
